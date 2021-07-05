@@ -5,20 +5,28 @@ function beepBoop(inputNumber) {
   for(let i = 0; i <= inputNumber; i++) {
     i = i.toString();
     if(i.includes(3)) {
-      numberedArray.push("Won't you be my neighbor?")
+      numberedArray.push(" Won't you be my neighbor?")
     }else if(i.includes(2)) {
-      numberedArray.push("Boop!")
+      numberedArray.push(" Boop!")
     }else if(i.includes(1)){
-      numberedArray.push("Beep!")
+      numberedArray.push(" Beep!")
     }else {
-      numberedArray.push(i); 
+      numberedArray.push(" " +i); 
     }
   }
   return numberedArray;
 }
 
-
-
-
 // UI Logic
 
+$(document).ready(function() {
+  $("form#robotMan").submit(function(event){
+    event.preventDefault();
+    let final = $("#inputNumber").val();
+    const numberReturn = beepBoop(final);
+
+    $("#finalresult").text(numberReturn);
+    $("#result").show();
+    
+  })
+})
