@@ -6,3 +6,28 @@
 #result {
   display:none;
 }
+
+h1 {
+  color: skyblue;
+  text-align: center;
+}
+
+img {
+  float: left;
+  padding-right:1cm;
+  border-radius: 1cm;
+}
+
+p {
+  font-family: Roboto;
+}
+
+div  {
+  border-style: solid;
+  color:white
+
+}
+
+body {
+  background: black
+}
